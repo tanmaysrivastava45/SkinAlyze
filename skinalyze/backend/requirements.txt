@@ -5,3 +5,4 @@ tensorflow==2.18.0
 pillow==10.2.0
 numpy==1.26.4
 python-dotenv==1.0.1
+gunicorn==21.2.0
