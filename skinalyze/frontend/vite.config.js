@@ -5,11 +5,15 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 5173,
-    proxy: {
-      '/api': {
-        target: 'http://localhost:8000',
-        changeOrigin: true,
-      }
-    }
+    strictPort: false,
+    open: true, // Auto-open browser
+  },
+  build: {
+    outDir: 'dist',
+    sourcemap: false,
+  },
+  // Fallback for SPA routing
+  preview: {
+    port: 4173,
   }
 })
