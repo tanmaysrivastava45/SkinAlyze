@@ -562,7 +562,7 @@ function AppContent() {
           <Route
             path="/*"
             element={
-              <ProtectedRoute>
+             
                 <Layout>
                   <Routes>
                     <Route path="/" element={<Navigate to="/dashboard" replace />} />
@@ -570,18 +570,20 @@ function AppContent() {
                     <Route path="/patients" element={<PatientList />} />
                     <Route path="/patients/:id" element={<PatientDetail />} />
                     <Route path="/patients/:id/analyze" element={<AnalysisView />} />
-                    <Route path="/patients/:id/progress" element={<ProgressTracking />} />
                     <Route path="/patients/:id/share" element={<ShareSummary />} />
                     <Route path="/huddle" element={<DailyHuddle />} />
                     <Route path="/detection" element={<DetectionAI />} />
+                    <Route path="/patients/:id/progress" element={<ProgressTracking />} />
                     <Route path="/model-info" element={<ModelInfo />} />
                     <Route path="/settings" element={<Settings />} />
                     <Route path="*" element={<Navigate to="/dashboard" replace />} />
                   </Routes>
                 </Layout>
-              </ProtectedRoute>
+              
             }
+
           />
+          
         </Routes>
       </Suspense>
     </>
