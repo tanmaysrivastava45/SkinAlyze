@@ -420,13 +420,13 @@ function PredictionCard({ rank, prediction }) {
           <p className="text-xs sm:text-sm text-gray-600">{prediction.category}</p>
           <p className="text-xs text-gray-500 mt-1">{prediction.description}</p>
         </div>
-        <div className="text-right flex-shrink-0">
+        {/* <div className="text-right flex-shrink-0">
           <div className="text-xl sm:text-2xl font-bold text-gray-900">{confidencePercent}%</div>
           <div className="text-xs text-gray-500">confidence</div>
-        </div>
+        </div> */}
       </div>
       
-      <div className="mt-2 sm:mt-3">
+      {/* <div className="mt-2 sm:mt-3">
         <div className="w-full bg-gray-200 rounded-full h-2">
           <div 
             className={`h-2 rounded-full transition-all duration-500 ${
@@ -435,7 +435,7 @@ function PredictionCard({ rank, prediction }) {
             style={{ width: `${confidencePercent}%` }}
           />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
