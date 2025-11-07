@@ -461,7 +461,6 @@ import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-route
 import { Toaster } from 'react-hot-toast'
 import { AuthProvider, useAuth } from './context/AuthContext'
 import { useEffect, Suspense, lazy } from 'react'
-
 // Components
 import Layout from './components/layout/Layout'
 import LoadingSpinner from './components/common/LoadingSpinner'
@@ -474,7 +473,7 @@ import Dashboard from './pages/Dashboard'
 const PatientList = lazy(() => import('./pages/PatientList'))
 const PatientDetail = lazy(() => import('./pages/PatientDetail'))
 const AnalysisView = lazy(() => import('./pages/AnalysisView'))
-const ProgressTracking = lazy(() => import('./pages/ProgressTracking'))
+const PatientProgress = lazy(() => import('./pages/ProgressTracking'))
 const ShareSummary = lazy(() => import('./pages/ShareSummary'))
 const ModelInfo = lazy(() => import('./pages/ModelInfo'))
 const Settings = lazy(() => import('./pages/Settings'))
@@ -573,7 +572,7 @@ function AppContent() {
                     <Route path="/patients/:id/share" element={<ShareSummary />} />
                     <Route path="/huddle" element={<DailyHuddle />} />
                     <Route path="/detection" element={<DetectionAI />} />
-                    <Route path="/patients/:id/progress" element={<ProgressTracking />} />
+                    <Route path="/patients/:id/progress" element={<PatientProgress />} />
                     <Route path="/model-info" element={<ModelInfo />} />
                     <Route path="/settings" element={<Settings />} />
                     <Route path="*" element={<Navigate to="/dashboard" replace />} />
